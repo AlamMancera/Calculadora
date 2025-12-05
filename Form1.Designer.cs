@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtDisplay = new TextBox();
+            tbDisplay = new TextBox();
             tblBotones = new TableLayoutPanel();
             btnSuma = new Button();
             btnResultado = new Button();
@@ -53,18 +53,18 @@
             tblBotones.SuspendLayout();
             SuspendLayout();
             // 
-            // txtDisplay
+            // tbDisplay
             // 
-            txtDisplay.Dock = DockStyle.Top;
-            txtDisplay.Font = new Font("Segoe UI", 20.1428585F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDisplay.Location = new Point(0, 0);
-            txtDisplay.Multiline = true;
-            txtDisplay.Name = "txtDisplay";
-            txtDisplay.ReadOnly = true;
-            txtDisplay.Size = new Size(690, 168);
-            txtDisplay.TabIndex = 0;
-            txtDisplay.Text = "0";
-            txtDisplay.TextAlign = HorizontalAlignment.Right;
+            tbDisplay.Dock = DockStyle.Top;
+            tbDisplay.Font = new Font("Segoe UI", 27.8571434F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbDisplay.Location = new Point(0, 0);
+            tbDisplay.Multiline = true;
+            tbDisplay.Name = "tbDisplay";
+            tbDisplay.ReadOnly = true;
+            tbDisplay.Size = new Size(690, 168);
+            tbDisplay.TabIndex = 0;
+            tbDisplay.Text = "0";
+            tbDisplay.TextAlign = HorizontalAlignment.Right;
             // 
             // tblBotones
             // 
@@ -114,6 +114,7 @@
             btnSuma.TabIndex = 19;
             btnSuma.Text = "+";
             btnSuma.UseVisualStyleBackColor = true;
+            btnSuma.Click += btnSuma_Click;
             // 
             // btnResultado
             // 
@@ -124,6 +125,7 @@
             btnResultado.TabIndex = 18;
             btnResultado.Text = "=";
             btnResultado.UseVisualStyleBackColor = true;
+            btnResultado.Click += btnResultado_Click;
             // 
             // btnPunto
             // 
@@ -134,6 +136,7 @@
             btnPunto.TabIndex = 17;
             btnPunto.Text = ".";
             btnPunto.UseVisualStyleBackColor = true;
+            btnPunto.Click += btnPunto_Click;
             // 
             // btnCero
             // 
@@ -144,6 +147,7 @@
             btnCero.TabIndex = 16;
             btnCero.Text = "0";
             btnCero.UseVisualStyleBackColor = true;
+            btnCero.Click += btnCero_Click;
             // 
             // btnResta
             // 
@@ -154,6 +158,7 @@
             btnResta.TabIndex = 15;
             btnResta.Text = "-";
             btnResta.UseVisualStyleBackColor = true;
+            btnResta.Click += btnResta_Click;
             // 
             // btnTres
             // 
@@ -164,6 +169,7 @@
             btnTres.TabIndex = 14;
             btnTres.Text = "3";
             btnTres.UseVisualStyleBackColor = true;
+            btnTres.Click += btnTres_Click;
             // 
             // btnDos
             // 
@@ -174,6 +180,7 @@
             btnDos.TabIndex = 13;
             btnDos.Text = "2";
             btnDos.UseVisualStyleBackColor = true;
+            btnDos.Click += btnDos_Click;
             // 
             // btnUno
             // 
@@ -184,6 +191,7 @@
             btnUno.TabIndex = 12;
             btnUno.Text = "1";
             btnUno.UseVisualStyleBackColor = true;
+            btnUno.Click += btnUno_Click;
             // 
             // btnMultiplicacion
             // 
@@ -194,6 +202,7 @@
             btnMultiplicacion.TabIndex = 11;
             btnMultiplicacion.Text = "x";
             btnMultiplicacion.UseVisualStyleBackColor = true;
+            btnMultiplicacion.Click += btnMultiplicacion_Click;
             // 
             // btnSeis
             // 
@@ -204,6 +213,7 @@
             btnSeis.TabIndex = 10;
             btnSeis.Text = "6";
             btnSeis.UseVisualStyleBackColor = true;
+            btnSeis.Click += btnSeis_Click;
             // 
             // btnCinco
             // 
@@ -214,6 +224,7 @@
             btnCinco.TabIndex = 9;
             btnCinco.Text = "5";
             btnCinco.UseVisualStyleBackColor = true;
+            btnCinco.Click += btnCinco_Click;
             // 
             // btnCuatro
             // 
@@ -224,6 +235,7 @@
             btnCuatro.TabIndex = 8;
             btnCuatro.Text = "4";
             btnCuatro.UseVisualStyleBackColor = true;
+            btnCuatro.Click += btnCuatro_Click;
             // 
             // btnDivision
             // 
@@ -234,6 +246,7 @@
             btnDivision.TabIndex = 7;
             btnDivision.Text = "/";
             btnDivision.UseVisualStyleBackColor = true;
+            btnDivision.Click += btnDivision_Click;
             // 
             // btnNueve
             // 
@@ -244,6 +257,7 @@
             btnNueve.TabIndex = 6;
             btnNueve.Text = "9";
             btnNueve.UseVisualStyleBackColor = true;
+            btnNueve.Click += btnNueve_Click;
             // 
             // btnOcho
             // 
@@ -254,6 +268,7 @@
             btnOcho.TabIndex = 5;
             btnOcho.Text = "8";
             btnOcho.UseVisualStyleBackColor = true;
+            btnOcho.Click += btnOcho_Click;
             // 
             // btnSiete
             // 
@@ -264,6 +279,7 @@
             btnSiete.TabIndex = 4;
             btnSiete.Text = "7";
             btnSiete.UseVisualStyleBackColor = true;
+            btnSiete.Click += btnSiete_Click;
             // 
             // btnPorcentaje
             // 
@@ -274,6 +290,7 @@
             btnPorcentaje.TabIndex = 3;
             btnPorcentaje.Text = "%";
             btnPorcentaje.UseVisualStyleBackColor = true;
+            btnPorcentaje.Click += btnPorcentaje_Click;
             // 
             // btnBorrarTodo
             // 
@@ -284,6 +301,7 @@
             btnBorrarTodo.TabIndex = 2;
             btnBorrarTodo.Text = "C";
             btnBorrarTodo.UseVisualStyleBackColor = true;
+            btnBorrarTodo.Click += btnBorrarTodo_Click;
             // 
             // btnCierre
             // 
@@ -294,6 +312,7 @@
             btnCierre.TabIndex = 1;
             btnCierre.Text = ")";
             btnCierre.UseVisualStyleBackColor = true;
+            btnCierre.Click += btnCierre_Click;
             // 
             // btnApertura
             // 
@@ -304,6 +323,7 @@
             btnApertura.TabIndex = 0;
             btnApertura.Text = "(";
             btnApertura.UseVisualStyleBackColor = true;
+            btnApertura.Click += btnApertura_Click;
             // 
             // Form1
             // 
@@ -311,7 +331,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(690, 813);
             Controls.Add(tblBotones);
-            Controls.Add(txtDisplay);
+            Controls.Add(tbDisplay);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Form1";
@@ -324,7 +344,7 @@
 
         #endregion
 
-        private TextBox txtDisplay;
+        private TextBox tbDisplay;
         private TableLayoutPanel tblBotones;
         private Button btnSuma;
         private Button btnResultado;
